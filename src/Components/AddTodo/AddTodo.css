@@ -1,0 +1,22 @@
+.todo-add-container {
+  margin-bottom: 30px;
+}
+
+.form-add-todo {
+  display: flex;
+  align-items: center;
+  margin: 0 0 3px;
+}
+
+.form-add-todo__input {
+  background: var(--constant-white);
+  border-radius: 6px;
+  padding: 11px 16px;
+  width: 100%;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.form-add-todo__input:focus {
+  box-shadow: 0 0 0 1px var(--constant-accent);
+}

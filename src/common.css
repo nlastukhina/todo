@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap");
+
+:root {
+  --constant-black: #262a2f;
+  --constant-accent: #1976d2;
+  --constant-grey1: #f2f2f2;
+  --constant-grey2: #a3a3a3;
+  --constant-error: #f06;
+  --constant-white: #fff;
+  --container-width: 640px;
+  --container-padding: 20px;
+  --grid-column-width: 60px;
+  --grid-gap: 20px;
+}
+
+*:not(svg *) {
+  all: unset;
+  display: revert;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--constant-grey1);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--constant-black);
+  min-width: calc(var(--container-width) + 2 * var(--container-padding));
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  max-width: var(--container-width);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, var(--grid-column-width));
+  gap: var(--grid-gap);
+}
+
+.message-error {
+  color: var(--constant-error);
+  font-size: 12px;
+}
