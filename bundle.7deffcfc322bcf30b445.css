@@ -1,0 +1,361 @@
+@import url(https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap);
+.home-page__hero-link {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 64px;
+}
+
+.home-page__content {
+  grid-column: span 7;
+}
+
+.home-page__sidebar {
+  grid-column: 9/-1;
+}
+
+.home-page__article-card:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.home-page__sidebar-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.home-page__trends-item {
+  grid-column: span 4;
+}
+
+.home-page__title {
+  margin-bottom: 32px;
+}
+
+.home-page__section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.home-page__promo {
+  height: 300px;
+  background: var(--constant-black);
+}
+
+.container.container__logbook {
+  margin-top: 50px;
+}
+
+.logbook-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--constant-grey2);
+  cursor: pointer;
+}
+
+.logbook-link:hover {
+  color: var(--constant-accent);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 3px 2px 3px 8px;
+  border-radius: 6px;
+}
+
+.todo:hover {
+  background: var(--constant-white);
+}
+
+.todo__input {
+  border-radius: 12px;
+  padding: 4px 12px 6px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.todo__text {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 12px 6px;
+  font-size: 16px;
+  color: var(--constant-grey2);
+}
+
+.todo__date {
+  padding: 0 8px;
+  white-space: nowrap;
+  font-size: 12px;
+  color: var(--constant-grey2);
+}
+
+.checkbox-custom {
+  position: relative;
+  border: 1px solid var(--constant-grey2);
+  width: 11px;
+  height: 11px;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.checkbox-custom:hover {
+  border: 1px solid var(--constant-accent);
+}
+
+.checkbox-custom.completed {
+  position: relative;
+  border-color: var(--constant-accent);
+  background: var(--constant-accent);
+}
+
+.checkbox-custom.completed::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  width: 3px;
+  height: 5px;
+  border: solid var(--constant-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todo-add-container {
+  margin-bottom: 30px;
+}
+
+.form-add-todo {
+  display: flex;
+  align-items: center;
+  margin: 0 0 3px;
+}
+
+.form-add-todo__input {
+  background: var(--constant-white);
+  border-radius: 6px;
+  padding: 11px 16px;
+  width: 100%;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.form-add-todo__input:focus {
+  box-shadow: 0 0 0 1px var(--constant-accent);
+}
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 20px;
+  cursor: pointer;
+  background: var(--constant-accent);
+  color: var(--constant-white);
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.button:hover {
+  background: #004e96;
+}
+
+.button:active {
+  background: #003463;
+}
+
+.button__loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.button__spinner {
+  animation: button-spinner 0.5s linear infinite;
+}
+
+@keyframes button-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+  color: var(--constant-accent);
+  font-size: 25px;
+  line-height: 1;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+.header {
+  margin-bottom: 60px;
+  background: var(--background-primary);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 76px;
+}
+
+.header__controls {
+  margin-left: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--constant-accent);
+  font-weight: 800;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.form-control {
+  margin: 0 0 25px;
+}
+
+.form-control__label {
+  display: block;
+  margin: 0 0 2px;
+}
+
+.form-control__input {
+  display: block;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid var(--constant-grey1);
+  padding: 10px 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-control__input:focus {
+  border-color: var(--constant-accent);
+}
+
+.login-container-wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  padding: 40px;
+  border-radius: 10px;
+  background: var(--constant-white);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px rgb(0 0 0 / 14%), 0 1px 3px rgb(0 0 0 / 12%);
+}
+
+.login-container__error {
+  background: var(--constant-error);
+  color: var(--constant-white);
+  padding: 6px 12px;
+  margin: 0 0 10px;
+  border-radius: 6px;
+}
+
+.button-oauth-login {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: rgb(0 0 0 / 20%) 1px 1px 5px 0;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+.button-oauth-login:hover {
+  background: #fafafa;
+}
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form__intro {
+  margin: 0 0 16px;
+  color: var(--constant-grey2);
+}
+
+.login-divider {
+  margin: 30px 0;
+  color: var(--constant-grey2);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+:root {
+  --constant-black: #262a2f;
+  --constant-accent: #1976d2;
+  --constant-grey1: #f2f2f2;
+  --constant-grey2: #a3a3a3;
+  --constant-error: #f06;
+  --constant-white: #fff;
+  --container-width: 640px;
+  --container-padding: 20px;
+  --grid-column-width: 60px;
+  --grid-gap: 20px;
+}
+
+*:not(svg *) {
+  all: unset;
+  display: revert;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--constant-grey1);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--constant-black);
+  min-width: calc(var(--container-width) + 2 * var(--container-padding));
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  max-width: var(--container-width);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, var(--grid-column-width));
+  gap: var(--grid-gap);
+}
+
+.message-error {
+  color: var(--constant-error);
+  font-size: 12px;
+}
+
